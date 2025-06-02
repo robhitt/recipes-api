@@ -1,3 +1,17 @@
+# Overview
+
+We're building a recipe app. The main things are are tracking:
+
+- **Users**: People who can create and share recipes.
+
+- **Recipes**: Each recipe has a title, description, and instructions.
+
+- **Ingredients**: Shared items like “flour,” “sugar,” “olive oil,” etc.
+
+- **Recipe Ingredients**: A specific amount of an ingredient used in a recipe.
+
+- **Labels**: Optional tags like "vegetarian" or "easy".
+
 # receipes-api
 
 Recipes Backend API - No Ads, No Longwinded Descriptions, straight to the point
