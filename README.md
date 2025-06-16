@@ -12,7 +12,7 @@ We're building a recipe app. The main things are are tracking:
 
 - **Labels**: Optional tags like "vegetarian" or "easy".
 
-# receipes-api
+# recipes-api
 
 Recipes Backend API - No Ads, No Longwinded Descriptions, straight to the point
 
@@ -45,7 +45,7 @@ createdb recipes
 ```
 docker run --name recipes-db \
   -e POSTGRES_USER=postgres \
-  -e POSTGRES_PASSWORD=postgres \
+  -e POSTGRES_PASSWORD=******** \
   -e POSTGRES_DB=recipes \
   -p 5432:5432 \
   -d postgres:16
@@ -67,11 +67,36 @@ PY
 
 - Expected output: `DB says: 1`
 
-- Docker commands
+### Docker commands
+
+Stop DB `docker stop recipes-db`
+Start DB again `docker start recipes-db`
+View logs `docker logs recipes-db`
+Delete container (removes data) `docker rm -f recipes-db`
+
+### Postgres Commands
+
+- Enter docker database `docker exec -it recipes-db psql -U postgres -d recipes`
+
+- A few usefule Postgres commands:
+  - `\dt` - List all tables
+  - `SELECT * FROM users;` - View all users
+  - `\q` - Exit Postgres
+
+### DB Gui Options
+
+You can use a free Postgres GUI client like:
+
+- [pgAdmin](https://www.pgadmin.org/)
+- [DBeaver](https://dbeaver.io/)
+- [TablePlus](https://tableplus.com/)
+
+Connection Details
 
 ```
-Stop DB	`docker stop recipes-db`
-Start DB again `docker start recipes-db`
-View logs	`docker logs recipes-db`
-Delete container (removes data)	`docker rm -f recipes-db`
+Host: localhost
+Port: 5432
+User: postgres
+Password: *********
+Database: recipes
 ```
